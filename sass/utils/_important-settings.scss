@@ -1,0 +1,44 @@
+/*----BODY FONT AND COLOR----*/
+
+body {
+  font-family: $font-main;
+  color: $color-text-main;
+}
+
+/*----LINK AND LIST NONEDECORATION AND PADDINGS AND MARGINS----*/
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/*----POSITIONS FOR CONTAINERS----*/
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  // outline: 2px solid tomato;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

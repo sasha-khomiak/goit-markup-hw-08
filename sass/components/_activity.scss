@@ -1,0 +1,36 @@
+/*----ACTIVITY----*/
+
+.activity__list {
+  display: flex;
+  gap: 30px;
+}
+
+.activity__list-item {
+  position: relative;
+}
+
+.activity__list-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.activity__list-hdr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $color-text-white;
+
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}

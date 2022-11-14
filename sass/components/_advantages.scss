@@ -1,0 +1,45 @@
+/*----ADVANTAGES----*/
+
+.advantages {
+  padding-top: 94px;
+  /*треба було тільки в одному блоці обрати відступ 94px - так сказала ментор Наталія, я обрав у наступному*/
+}
+
+.advantages__list {
+  display: flex;
+  gap: 30px;
+}
+
+.advantages__list-item {
+  width: 270px;
+}
+
+.advantages__list-icon {
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: $color-background-second;
+  @include flex-center();
+  justify-content: center;
+}
+
+.advantages__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.advantages__header {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $color-text-important;
+
+  margin-bottom: 10px;
+}
+
+.advantages__review {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

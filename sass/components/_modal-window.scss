@@ -1,0 +1,228 @@
+/*----MODAL WINDOW----*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  /* z-index тому,що по верстці модалка вище "Чим ми займаємося" стоїть, треба або z-index поставити більше, або перемістити модалку у верстці нижче секції "Чим ми займаємося". я вибрав перший варіант. але це ж не проблема */
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  min-width: 528px;
+  min-height: 581px;
+  background-color: $color-background-white;
+  padding: 40px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  opacity: 1;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+}
+
+.modal__header {
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $color-text-important;
+
+  margin-bottom: 12px;
+}
+
+.modal__form-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.modal__input-wrap {
+  position: relative;
+  color: $color-icon-fill-grey-dark;
+  margin-bottom: 10px;
+}
+
+.modal__input {
+  height: 40px;
+  width: 448px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  padding-left: 41px;
+
+  font-size: 12px;
+  line-height: 1.1667;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  outline: none;
+
+  .modal__input-wrap:hover &,
+  &:focus {
+    border-color: $color-border-accent;
+  }
+}
+
+.modal__form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: currentColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal__input-wrap:hover &,
+  .modal__input:focus + & {
+    color: $color-icon-fill-accent;
+  }
+}
+
+.modal__form-textarea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.modal__textarea {
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.1667;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  resize: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-color: $color-border-accent;
+  }
+}
+
+.modal__form-agreement {
+  @include flex-center();
+  margin-bottom: 30px;
+}
+
+.modal__agreement-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.agreement__check-lable {
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 7px;
+
+  background-color: $color-background-white;
+  border: 2px solid $color-border-grey;
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal__agreement-checkbox:focus + &,
+  .modal__agreement-checkbox:hover + & {
+    border-color: $color-border-accent;
+  }
+
+  .modal__agreement-checkbox:checked + & {
+    background-color: $color-icon-fill-accent;
+    background-image: url(../images/check.svg);
+    border-width: 0;
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+
+.modal__agreement-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.modal__agreement-lnk {
+  color: $color-text-accent;
+}
+
+.btn--modal-feedback {
+  min-width: 200px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* outline: none; */
+}
+
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @include flex-center();
+
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  color: $color-icon-fill-black;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: $color-button-blue;
+  }
+}
+
+.btn-close__icon {
+  fill: currentColor;
+}
