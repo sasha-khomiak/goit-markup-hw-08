@@ -58,13 +58,6 @@
   align-items: center;
 }
 
-// Ховаємо мобільне меню від 768px
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
 // меню випливне вікно напівзатемнений фон
 .menu-container {
   position: fixed;
@@ -187,6 +180,17 @@
 }
 
 /*----Стиль для планшета до 768-1200----*/
+
+// Ховаємо мобільне меню від 768px
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .menu {

@@ -186,11 +186,6 @@ p {
           align-items: center;
 }
 
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
 .menu-container {
   position: fixed;
   top: 0;
@@ -297,6 +292,14 @@ p {
 }
 
 /*----Стиль для планшета до 768-1200----*/
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .menu {
     display: -webkit-box;
