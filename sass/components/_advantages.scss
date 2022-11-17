@@ -1,24 +1,28 @@
 /*----ADVANTAGES----*/
 
+/*----Базовий стиль для мобілки до 480-768----*/
+
 .advantages {
-  padding-top: 94px;
-  /*треба було тільки в одному блоці обрати відступ 94px - так сказала ментор Наталія, я обрав у наступному*/
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.advantages__list {
-  display: flex;
-  gap: 30px;
-}
+@media screen and (max-width: 767px) {
+  .advantages__list-item {
+    width: 100%;
+  }
 
-.advantages__list-item {
-  width: 270px;
+  .advantages__list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .advantages__list-icon {
   height: 120px;
   margin-bottom: 30px;
   background-color: $color-background-second;
-  @include flex-center();
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -32,7 +36,7 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
+  text-align: center;
   color: $color-text-important;
 
   margin-bottom: 10px;
@@ -42,4 +46,36 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+/*----Стиль для планшета до 768-1200----*/
+
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .advantages__list-item {
+    width: calc((100% - 30px) / 2);
+  }
+
+  .advantages__header {
+    text-align: left;
+  }
+}
+
+/*----Стиль для компа від 1200----*/
+
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding-top: 94px;
+    padding-bottom: 0;
+    /*треба було тільки в одному блоці обрати відступ 94px - так сказала ментор Наталія, я обрав у наступному*/
+  }
+
+  .advantages__list-item {
+    width: calc((100% - 90px) / 4);
+  }
 }

@@ -28,17 +28,54 @@ p {
   margin: 0;
 }
 
-/*----POSITIONS FOR CONTAINERS----*/
+/*----POSITIONS FOR SECTION AND CONTAINERS----*/
+
+/*----Базовий стиль для мобілки до 480-768----*/
+/*----Стиль для планшета до 768-1200----*/
+
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+/*----Стиль для компа від 1200----*/
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+/*----Базовий стиль для мобілки до 480-768----*/
 
 .container {
-  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
   // outline: 2px solid tomato;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+/*----Стиль для планшета до 768-1200----*/
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/*----Стиль для компа від 1200----*/
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }

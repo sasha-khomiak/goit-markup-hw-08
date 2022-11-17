@@ -1,5 +1,16 @@
 /*----ACTIVITY----*/
 
+/*----Базовий стиль для мобілки до 480-768----*/
+/*----Стиль для планшета до 768-1200----*/
+
+@media screen and (max-width: 1199px) {
+  .activity {
+    display: none;
+  }
+}
+
+/*----Стиль для компа від 1200----*/
+
 .activity__list {
   display: flex;
   gap: 30px;

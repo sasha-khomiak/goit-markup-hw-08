@@ -1,14 +1,23 @@
 /*----CLIENT----*/
 
+/*----Базовий стиль для мобілки до 480-768----*/
+
 .client-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
-.client__link {
-  @include flex-center();
-  width: 170px;
+.client__wrap {
+  width: calc((100% - 30px) / 2);
   height: 92px;
+}
+
+.client__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   border: 1px solid $color-icon-fill-grey;
   border-radius: 4px;
   justify-content: center;
@@ -26,4 +35,20 @@
 
 .client__icon {
   fill: currentColor;
+}
+
+/*----Стиль для планшета до 768-1200----*/
+
+@media screen and (min-width: 768px) {
+  .client__wrap {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+/*----Стиль для компа від 1200----*/
+
+@media screen and (min-width: 1200px) {
+  .client__wrap {
+    width: calc((100% - 5 * 30px) / 6);
+  }
 }

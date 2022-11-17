@@ -1,10 +1,25 @@
 /*----PORTFOLIO BTNS----*/
 
+/*----Базовий стиль для мобілки до 480-768----*/
+
 .portfolio-options {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  justify-content: start;
   gap: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-options {
+    gap: 0;
+    margin-bottom: 25px;
+  }
+
+  .btn-portfolio {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
 }
 
 .btn-portfolio {
@@ -39,5 +54,22 @@
 
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/*----Стиль для планшета до 768-1200----*/
+
+@media screen and (min-width: 768px) {
+  .portfolio-options {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+
+/*----Стиль для компа від 1200----*/
+
+@media screen and (min-width: 1200px) {
+  .portfolio-options {
+    margin-bottom: 50px;
   }
 }

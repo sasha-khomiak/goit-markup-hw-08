@@ -28,50 +28,108 @@
           >Web<span class="logo__alt-header">Studio</span></a
         >
 
-        <nav>
-          <ul class="list header-list">
+        <!-- кнопка моб меню смужки -->
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" class="toggle-icon">
+            <use href="./images/icons.svg#icon-top-menu-lines"></use>
+          </svg>
+        </button>
+
+        <!-- широке меню для планшета і десктопа-->
+        <div class="menu">
+          <nav>
+            <ul class="list header-list">
+              <li class="header-list__item">
+                <a
+                  href="./index.html"
+                  class="link header-list__link header-list__link--active"
+                  >Студія</a
+                >
+              </li>
+              <li class="header-list__item">
+                <a href="./portfolio.html" class="link header-list__link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="header-list__item">
+                <a href="#" class="link header-list__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="list header-list header-list--right-position">
             <li class="header-list__item">
-              <a href="./index.html" class="link header-list__link header-list__link--active"
-                >Студія</a
+              <a
+                href="mailto:info@devstudio.com"
+                class="link header-list__link header-list__link--connect"
+              >
+                <svg width="12" height="12" class="header-list__icon">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
             <li class="header-list__item">
-              <a href="./portfolio.html" class="link header-list__link"
-                >Портфоліо</a
+              <a
+                href="tel:+380961111111"
+                class="link header-list__link header-list__link--connect"
               >
-            </li>
-            <li class="header-list__item">
-              <a href="#" class="link header-list__link">Контакти</a>
+                <svg width="12" height="16" class="header-list__icon">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
+        </div>
 
-        <ul class="list header-list header-list--right-position">
-          <li class="header-list__item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="link header-list__link header-list__link--connect"
-            >
-              <svg width="12" height="12" class="header-list__icon">
-                <use href="./images/icons.svg#icon-envelope"></use>
+        <!-- мобільне меню -->
+
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <div class="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+              <svg width="40" height="40" class="toggle-icon">
+                <use href="./images/icons.svg#icon-top-menu-close"></use>
               </svg>
-              info@devstudio.com</a
+            </button>
+
+            <ul class="list">
+              <li><a href="#" class="link mobile-menu__link">Студія</a></li>
+              <li><a href="#" class="link mobile-menu__link">Портфоліо</a></li>
+              <li><a href="#" class="link mobile-menu__link">Контакти</a></li>
+            </ul>
+
+            <a href="tel:+380961111111" class="link mobile-menu__phone"
+              >+38 096 111 11 11</a
             >
-          </li>
-          <li class="header-list__item">
-            <a
-              href="tel:+380961111111"
-              class="link header-list__link header-list__link--connect"
+            <a href="mailto:info@devstudio.com" class="link mobile-menu__email"
+              >info@devstudio.com</a
             >
-              <svg width="12" height="16" class="header-list__icon">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+
+            <ul class="list mobile-menu__social-block">
+              <li class="mobile-menu__social-container">
+                <a href="#" class="link mobile-menu__social">Instagram</a>
+              </li>
+              <li class="mobile-menu__social-container">
+                <a href="#" class="link mobile-menu__social">Twitter</a>
+              </li>
+              <li class="mobile-menu__social-container">
+                <a href="#" class="link mobile-menu__social">Facebook</a>
+              </li>
+              <li class="mobile-menu__social-container">
+                <a href="#" class="link mobile-menu__social">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
+
+    <!-- головний блок -->
 
     <main>
       <section class="hero">
@@ -227,24 +285,27 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="activity section">
         <div class="container">
           <h2 class="section-header">Чим ми займаємося</h2>
           <ul class="list activity__list">
             <li class="activity__list-item">
               <img
-                src="./images/do_do_1.jpg"
-                alt="Зображення 1"
+                srcset="./images/do-do-1.jpg 1x, ./images/do-do-1@2x.jpg 2x"
+                src="./images/do-do-1.jpg"
+                alt="Активність 1"
                 width="370"
                 height="294"
                 class="activity__list-image"
               />
+
               <h3 class="activity__list-hdr">Десктопні додатки</h3>
             </li>
             <li class="activity__list-item">
               <img
-                src="./images/do_do_2.jpg"
-                alt="Зображення 2"
+                srcset="./images/do-do-2.jpg 1x, ./images/do-do-2@2x.jpg 2x"
+                src="./images/do-do-2.jpg"
+                alt="Активність 1"
                 width="370"
                 height="294"
                 class="activity__list-image"
@@ -253,8 +314,9 @@
             </li>
             <li class="activity__list-item">
               <img
-                src="./images/do_do_3.jpg"
-                alt="Зображення 3"
+                srcset="./images/do-do-3.jpg 1x, ./images/do-do-3@2x.jpg 2x"
+                src="./images/do-do-3.jpg"
+                alt="Активність 1"
                 width="370"
                 height="294"
                 class="activity__list-image"
@@ -270,13 +332,37 @@
           <h2 class="section-header">Наша команда</h2>
           <ul class="list team__list">
             <li class="person-card">
-              <img
-                src="./images/worker_1.jpg"
-                alt="фото Ігор Дем'яненко"
-                width="270"
-                height="260"
-                class="person-card__photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/worker-1-desktop.jpg    1x,
+                    ./images/worker-1-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/worker-1-mobile.jpg    1x,
+                    ./images/worker-1-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/worker-1-tablet.jpg    1x,
+                    ./images/worker-1-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  src="./images/worker-1-desktop.jpg"
+                  class="person-card__photo"
+                  width="100%"
+                  height="auto"
+                  alt="фото Ігор Дем'яненко"
+                />
+              </picture>
               <h3 class="person-card__name">Ігор Дем'яненко</h3>
               <p class="person-card__position">Product Designer</p>
 
@@ -312,13 +398,38 @@
               </ul>
             </li>
             <li class="person-card">
-              <img
-                src="./images/worker_2.jpg"
-                alt="фото Ольга Рєпіна"
-                width="270"
-                height="260"
-                class="person-card__photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/worker-2-desktop.jpg    1x,
+                    ./images/worker-2-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/worker-2-mobile.jpg    1x,
+                    ./images/worker-2-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/worker-2-tablet.jpg    1x,
+                    ./images/worker-2-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  src="./images/worker-2-desktop.jpg"
+                  class="person-card__photo"
+                  width="100%"
+                  height="auto"
+                  alt="фото Ольга Рєпіна"
+                />
+              </picture>
+
               <h3 class="person-card__name">Ольга Рєпіна</h3>
               <p class="person-card__position">Frontend Developer</p>
               <ul class="person-card__social list">
@@ -353,13 +464,38 @@
               </ul>
             </li>
             <li class="person-card">
-              <img
-                src="./images/worker_3.jpg"
-                alt="фото Микола Тарасов"
-                width="270"
-                height="260"
-                class="person-card__photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/worker-3-desktop.jpg    1x,
+                    ./images/worker-3-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/worker-3-mobile.jpg    1x,
+                    ./images/worker-3-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/worker-3-tablet.jpg    1x,
+                    ./images/worker-3-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  src="./images/worker-3-desktop.jpg"
+                  class="person-card__photo"
+                  width="100%"
+                  height="auto"
+                  alt="фото Микола Тарасов"
+                />
+              </picture>
+
               <h3 class="person-card__name">Микола Тарасов</h3>
               <p class="person-card__position">Marketing</p>
               <ul class="person-card__social list">
@@ -394,13 +530,38 @@
               </ul>
             </li>
             <li class="person-card">
-              <img
-                src="./images/worker_4.jpg"
-                alt="фото Михайло Єрмаков"
-                width="270"
-                height="260"
-                class="person-card__photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/worker-4-desktop.jpg    1x,
+                    ./images/worker-4-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/worker-4-mobile.jpg    1x,
+                    ./images/worker-4-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/worker-4-tablet.jpg    1x,
+                    ./images/worker-4-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  src="./images/worker-4-desktop.jpg"
+                  class="person-card__photo"
+                  width="100%"
+                  height="auto"
+                  alt="фото Михайло Єрмаков"
+                />
+              </picture>
+
               <h3 class="person-card__name">Михайло Єрмаков</h3>
               <p class="person-card__position">UI Designer</p>
               <ul class="person-card__social list">
@@ -442,42 +603,42 @@
         <div class="container">
           <h2 class="section-header">Постійні клієнти</h2>
           <ul class="list client-list">
-            <li>
+            <li class="client__wrap">
               <a href="#" class="client__link">
                 <svg class="client__icon" width="41">
                   <use href="./images/icons.svg#icon-ya-co"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="client__wrap">
               <a href="#" class="client__link">
                 <svg class="client__icon" width="40">
                   <use href="./images/icons.svg#icon-tagline-here"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="client__wrap">
               <a href="#" class="client__link">
                 <svg class="client__icon" width="44">
                   <use href="./images/icons.svg#icon-company"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="client__wrap">
               <a href="#" class="client__link">
                 <svg class="client__icon" width="85">
                   <use href="./images/icons.svg#icon-foster-peters"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="client__wrap">
               <a href="#" class="client__link">
                 <svg class="client__icon" width="63">
                   <use href="./images/icons.svg#icon-brand"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="client__wrap">
               <a href="#" class="client__link">
                 <svg class="client__icon" width="94">
                   <use href="./images/icons.svg#icon-company-tagline"></use>
@@ -524,7 +685,7 @@
 
         <div class="footer-social">
           <h3 class="footer__title">приєднуйтесь</h3>
-          <ul class=" list footer__social">
+          <ul class="list footer__social">
             <li>
               <a href="#" class="footer__social-link">
                 <svg class="footer__social-icon">
@@ -579,5 +740,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

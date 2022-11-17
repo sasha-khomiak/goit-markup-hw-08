@@ -1,11 +1,22 @@
 /*----LOGO----*/
 
+/*----Базовий лого для мобілки до 480----*/
+
 .logo {
   font-family: $font-logo;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16667;
   letter-spacing: 0.03em;
 
   color: $color-text-accent;
+}
+
+/*----Зміни лого для десктопа від 1200----*/
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }

@@ -1,19 +1,15 @@
 /*----FOOTER----*/
 
+/*----Базовий стиль для мобілки до 480-768----*/
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-
-  background: $color-background-first;
-}
-
-.footer__block {
-  display: flex;
-  gap: 30px;
+  background-color: $color-background-first;
 }
 
 .footer__maininfo {
-  width: 270px;
+  text-align: center;
 }
 
 .logo--footer {
@@ -55,29 +51,30 @@
   }
 }
 
+.footer-social {
+  padding-top: 60px;
+}
 .footer__title {
-  margin-top: 12px;
   margin-bottom: 20px;
 
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
 
   color: $color-text-white;
-}
-
-.footer-social {
-  width: 270px;
 }
 
 .footer__social {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 .footer__social-link {
-  @include flex-center();
+  display: flex;
+  align-items: center;
 
   background-color: rgba(255, 255, 255, 0.1);
   width: 44px;
@@ -100,17 +97,18 @@
 }
 
 .footer-subscribe {
-  width: 570px;
+  padding-top: 60px;
 }
 
 .footer__form {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
 }
 
 .footer__mail {
-  width: 358px;
+  width: 100%;
   height: 50px;
+  margin-bottom: 20px;
 
   padding: 15px 16px;
 
@@ -132,11 +130,85 @@
 .btn--footer {
   width: 200px;
 
-  @include flex-center();
+  display: flex;
+  align-items: center;
   justify-content: center;
+  align-self: center;
 }
 
 .btn__footer-icon {
   fill: $color-icon-fill-white;
   margin-left: 10px;
+}
+
+/*----Стиль для планшета до 768-1200----*/
+
+@media screen and (min-width: 768px) {
+  .footer__block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .footer__maininfo {
+    width: 350px;
+  }
+
+  .footer-social {
+    width: 350px;
+  }
+
+  .footer-social {
+    padding-top: 5px;
+  }
+
+  .footer-subscribe {
+    width: 450px;
+    padding-top: 30px;
+  }
+}
+
+/*----Стиль для компа від 1200----*/
+
+@media screen and (min-width: 1200px) {
+  .footer__maininfo {
+    width: 270px;
+    text-align: left;
+  }
+
+  .footer-social {
+    width: 270px;
+    padding-top: 0;
+  }
+
+  .footer__title {
+    text-align: left;
+    margin-top: 12px;
+  }
+
+  .footer__social {
+    justify-content: left;
+  }
+
+  .footer-subscribe {
+    width: 570px;
+    padding-top: 0;
+  }
+
+  .footer__form {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .footer__mail {
+    width: 358px;
+    margin-bottom: 0;
+  }
+
+  // .footer__block {
+  //   display: flex;
+  //   gap: 30px;
+  // }
 }
