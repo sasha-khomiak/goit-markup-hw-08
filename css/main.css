@@ -217,6 +217,14 @@ p {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   padding: 48px 40px;
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .menu-container .menu-toggle {
@@ -249,7 +257,7 @@ p {
   letter-spacing: 0.02em;
   color: #757575;
   display: inline-block;
-  margin-top: 270px;
+  margin-top: auto;
   margin-bottom: 32px;
 }
 .mobile-menu__phone:hover, .mobile-menu__phone:focus {
@@ -269,6 +277,19 @@ p {
   color: #2196f3;
 }
 
+@media (max-width: 377px) {
+  .mobile-menu__phone {
+    font-size: 24px;
+  }
+}
+@media (max-width: 440px) {
+  .mobile-menu__email {
+    margin-bottom: 32px;
+  }
+  .mobile-menu__link {
+    font-size: 28px;
+  }
+}
 .mobile-menu__social-block {
   display: -webkit-box;
   display: -ms-flexbox;

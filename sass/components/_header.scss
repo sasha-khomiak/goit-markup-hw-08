@@ -88,6 +88,11 @@
   transform: translateX(-50%);
 
   padding: 48px 40px;
+  overflow: scroll;
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
 }
 
 // перемикач з хрестиком розташування відносно меню згори справа + зміна кольору
@@ -129,7 +134,8 @@
   color: #757575;
 
   display: inline-block;
-  margin-top: 270px;
+  margin-top: auto;
+  // margin-top: 270px;
   margin-bottom: 32px;
 
   &:hover,
@@ -154,6 +160,22 @@
   &:hover,
   &:focus {
     color: $color-text-accent;
+  }
+}
+
+@media (max-width: 377px) {
+  .mobile-menu__phone {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 440px) {
+  .mobile-menu__email {
+    margin-bottom: 32px;
+  }
+
+  .mobile-menu__link {
+    font-size: 28px;
   }
 }
 
@@ -187,7 +209,7 @@
     display: none;
   }
 
-  //????
+  //мобільне меню приховано коли екран від 768
   .mobile-menu {
     display: none;
   }
